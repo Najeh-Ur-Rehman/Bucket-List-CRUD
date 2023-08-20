@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>Switc Bulb</title>
+    <style>
+        .center {
+            display: block;              
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body style="background-color: black;">
+    <img id="bulb" src="bulb off.png" alt="" class="center">
+    <button id="toggleBtn" type="button" class="center btn btn-danger">Turn On</button>
+
+    <script>
+        let btn = document.getElementById('toggleBtn')
+        let bulb = document.getElementById('bulb')
+        btn.addEventListener('click', toggleBulb)
+        function toggleBulb(e) {
+            if(btn.textContent.includes('On')){
+            bulb.src = "light bulb on.png"
+            btn.textContent = "Turn Off"
+            } else {
+                bulb.src = "bulb off.png"
+                btn.textContent = "Turn On"
+            }
+        }
+    </script>
+</body>
+</html>
